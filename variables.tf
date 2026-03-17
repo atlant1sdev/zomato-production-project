@@ -15,3 +15,14 @@ variable "project_environment" {
   description = "my project environment"
   type        = string
 }
+
+
+variable "instance_type" {
+  description = "My instance type"
+  type        = string
+}
+
+variable "instance_ami" {
+  description = "My instance AMI ID"
+  type        = string
+}

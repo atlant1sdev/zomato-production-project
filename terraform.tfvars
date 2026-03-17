@@ -1,3 +1,5 @@
 aws_region          = "ap-south-1"
 project_name        = "zomato"
 project_environment = "production"
+instance_type       = "t3.micro"
+instance_ami        = "ami-0f559c3642608c138"
