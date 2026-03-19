@@ -57,8 +57,17 @@ resource "aws_instance" "webserver" {
   tags = {
     "Name" = "${var.project_name}-${var.project_environment}-webserver"
   }
- lifecycle {
+  lifecycle {
     create_before_destroy = true
   }
+}
+
+resource "aws_eip" "webserver" {
+  domain = "vpc"
+}
+
+resource "aws_eip_association" "webserver" {
+  instance_id   = aws_instance.webserver.id
+  allocation_id = aws_eip.webserver.id
 }
 
