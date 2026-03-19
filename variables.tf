@@ -26,3 +26,13 @@ variable "instance_ami" {
   description = "My instance AMI ID"
   type        = string
 }
+
+variable "domain" {
+  description = "my domain"
+  type        = string
+}
+
+variable "hostname" {
+  description = "my hostname"
+  type        = string
+}
